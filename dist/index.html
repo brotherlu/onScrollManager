@@ -3,7 +3,10 @@
     console.log('g');
   };
   onScrollManager.init();
-  onScrollManager.addMethod(function(){
+  onScrollManager.addMethod('texter',function(){
     console.log($(window).scrollTop());
+  });
+onScrollManager.addMethod('Second',function(){
+    console.log('Second');
   });
 </script></body></html>
