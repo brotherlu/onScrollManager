@@ -13,7 +13,7 @@ gulp.task('scripts', function(){
 	gulp.src('src/js/**/*.js')
 	.pipe(plumber())
 	.pipe(sourcemaps.init())
-	.pipe(concat('isInViewport.min.js'))
+	.pipe(concat('onScrollManager.min.js'))
 	.pipe(ngannotate())
 	.pipe(uglify())
 	.pipe(sourcemaps.write())

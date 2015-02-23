@@ -3,13 +3,29 @@
 <head>
 <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="js/onScrollManager.min.js"></script>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/main.css">
+<title>onScrollManager</title>
 </head>
 <body>
+<section>
   <div class="page-header">
     <h1>onScrollManager</h1>
   </div>
   <div class="page-content">
+    <h2>Test this site when scrolling</h2>
   </div>
+</section>
+<section>
+  <h1>Second Page</h1>
+</section>
+<script>
+  var g = function(){
+    console.log('g');
+  };
+  onScrollManager.init();
+  onScrollManager.addMethod(function(){
+    console.log($(window).scrollTop());
+  });
+</script>
 </body>
 </html>
