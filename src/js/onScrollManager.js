@@ -18,10 +18,16 @@ var _onScrollManager,
 
       addMethod: function(id, func) {
         if(typeof(func) === 'function'){
+          for(var i=0; i<_onScrollManager.methods.length; i++){
+            if(_onScrollManager.methods[i].id === id){
+              console.log("Method `"+id+"` already exists pick another id for this method.");
+              return;
+            }
+          }
           this.settings.methods.push({id:id,func:func});
-        } else {
-          console.log('Callback is not function');
+          return;
         }
+        console.log('Callback is not function!');
       },
 
       removeMethod: function(id){
