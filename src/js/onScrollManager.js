@@ -33,7 +33,7 @@ var _onScrollManager,
       removeMethod: function(id){
         for(var i=0; i<_onScrollManager.methods.length; i++){
           if(_onScrollManager.methods[i].id === id){
-            _onScrollManager.methods = _onScrollManager.methods.splice(i,1);
+             _onScrollManager.methods.splice(i,1);
           }
         }
       },
